@@ -124,15 +124,25 @@ body {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  padding-bottom: 1.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.category-tile:hover .tile-overlay {
-  opacity: 1;
+@media (hover: hover) {
+  .category-tile .tile-overlay {
+    align-items: center;
+    padding-bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+  }
+
+  .category-tile:hover .tile-overlay {
+    opacity: 1;
+  }
 }
 
 .tile-overlay span {
