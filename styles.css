@@ -246,6 +246,108 @@ body {
   font-size: 0.85rem;
 }
 
+/* ---- Layout: Scatter (Moments) ---- */
+.layout-scatter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1rem 0 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scatter-item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scatter-item:hover {
+  transform: scale(1.01);
+}
+
+.scatter-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sizes */
+.scatter-large {
+  width: 70%;
+}
+
+.scatter-medium {
+  width: 50%;
+}
+
+.scatter-small {
+  width: 35%;
+}
+
+/* Horizontal offsets */
+.nudge-left {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+.nudge-left-far {
+  align-self: flex-start;
+  margin-left: 2%;
+}
+
+.nudge-right {
+  align-self: flex-end;
+  margin-right: 5%;
+}
+
+.nudge-right-far {
+  align-self: flex-end;
+  margin-right: 2%;
+}
+
+/* Add slight rotation for organic feel */
+.scatter-item:nth-child(3n+1) {
+  transform: rotate(-0.8deg);
+}
+
+.scatter-item:nth-child(3n+2) {
+  transform: rotate(0.5deg);
+}
+
+.scatter-item:nth-child(3n) {
+  transform: rotate(-0.3deg);
+}
+
+.scatter-item:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+@media (max-width: 520px) {
+  .scatter-large {
+    width: 90%;
+  }
+
+  .scatter-medium {
+    width: 75%;
+  }
+
+  .scatter-small {
+    width: 60%;
+  }
+
+  .nudge-left,
+  .nudge-left-far {
+    margin-left: 2%;
+  }
+
+  .nudge-right,
+  .nudge-right-far {
+    margin-right: 2%;
+  }
+}
+
 /* ---- Layout: Sidebar (Events) ---- */
 .layout-sidebar {
   display: flex;

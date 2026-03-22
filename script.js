@@ -151,6 +151,37 @@ function renderGridLayout(cat) {
   galleryBody.appendChild(grid);
 }
 
+function renderScatterLayout(cat) {
+  currentImages = cat.images || [];
+  const scatter = document.createElement("div");
+  scatter.className = "layout-scatter";
+
+  // Predefined size/offset patterns that repeat
+  const patterns = [
+    { size: "large", nudge: "nudge-right" },
+    { size: "small", nudge: "nudge-left" },
+    { size: "medium", nudge: "" },
+    { size: "small", nudge: "nudge-right-far" },
+    { size: "large", nudge: "nudge-left" },
+    { size: "medium", nudge: "nudge-right" },
+    { size: "small", nudge: "" },
+    { size: "large", nudge: "nudge-left-far" },
+    { size: "medium", nudge: "nudge-right-far" },
+    { size: "small", nudge: "nudge-left" },
+  ];
+
+  currentImages.forEach((imgObj, i) => {
+    const p = patterns[i % patterns.length];
+    const item = document.createElement("div");
+    item.className = `scatter-item scatter-${p.size} ${p.nudge}`.trim();
+    item.innerHTML = `<img src="${imgObj.src}" alt="${imgObj.title || imgObj.caption || cat.name + ' moment'}" loading="lazy" />`;
+    item.addEventListener("click", () => openLightbox(i));
+    scatter.appendChild(item);
+  });
+
+  galleryBody.appendChild(scatter);
+}
+
 function renderSidebarLayout(cat) {
   currentImages = getAllImageObjects(cat);
   const wrapper = document.createElement("div");
@@ -382,6 +413,9 @@ function openGallery(catIndex, pushState = true) {
   switch (cat.layout) {
     case "sidebar":
       renderSidebarLayout(cat);
+      break;
+    case "scatter":
+      renderScatterLayout(cat);
       break;
     case "cities":
       renderCitiesLayout(cat);

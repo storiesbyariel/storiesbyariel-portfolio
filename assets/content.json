@@ -24,17 +24,23 @@
     },
     {
       "name": "Moments",
-      "layout": "cities",
-      "cover": "assets/moments/cover.jpg",
-      "groups": [
-        {
-          "name": "New York",
-          "images": [
-            { "src": "https://picsum.photos/seed/mom-ny1/1200/800" },
-            { "src": "https://picsum.photos/seed/mom-ny2/1200/800" },
-            { "src": "https://picsum.photos/seed/mom-ny3/1200/800" }
-          ]
-        }
+      "layout": "scatter",
+      "cover": "assets/moments/IMGC5148.jpg",
+      "images": [
+        { "src": "assets/moments/IMG_0645.jpg" },
+        { "src": "assets/moments/IMG_1660.jpg" },
+        { "src": "assets/moments/IMG_2103.jpg" },
+        { "src": "assets/moments/IMG_2106.jpg" },
+        { "src": "assets/moments/IMG_2178.jpg" },
+        { "src": "assets/moments/IMG_2203.jpg" },
+        { "src": "assets/moments/IMGC0103.jpg" },
+        { "src": "assets/moments/IMGC0129.jpg" },
+        { "src": "assets/moments/IMGC0167.jpg" },
+        { "src": "assets/moments/IMGC0306.jpg" },
+        { "src": "assets/moments/IMGC0325.jpg" },
+        { "src": "assets/moments/IMGC5148.jpg" },
+        { "src": "assets/moments/IMGC5249.jpg" },
+        { "src": "assets/moments/IMGC9814_Original.jpg" }
       ]
     },
     {
