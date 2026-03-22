@@ -54,8 +54,40 @@
     {
       "name": "Events",
       "layout": "sidebar",
-      "cover": "assets/events/quince/IMG_1497.jpg",
+      "cover": "assets/events/fort-light/event-1/IMGC4420.jpg",
       "groups": [
+        {
+          "name": "Fort Light",
+          "subgroups": [
+            {
+              "name": "Event 1",
+              "images": [
+                { "src": "assets/events/fort-light/event-1/IMGC4420.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4422.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4452.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4501.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4555.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4644.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4715.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4811.jpg" },
+                { "src": "assets/events/fort-light/event-1/IMGC4979.jpg" }
+              ]
+            },
+            {
+              "name": "Event 2",
+              "images": [
+                { "src": "assets/events/fort-light/event-2/IMGC5936.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC5970.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6000.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6028.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6110.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6166.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6265.jpg" },
+                { "src": "assets/events/fort-light/event-2/IMGC6282.jpg" }
+              ]
+            }
+          ]
+        },
         {
           "name": "Quince",
           "images": [

@@ -317,6 +317,20 @@ body {
   gap: var(--gap);
 }
 
+.subgroup-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.subgroup-heading:first-of-type {
+  padding-top: 0.5rem;
+}
+
 /* ---- Layout: Cities (Street, Travel) ---- */
 .cities-nav {
   display: flex;

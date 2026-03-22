@@ -63,9 +63,15 @@ function showContact(pushState = true) {
 }
 
 // ---- Helpers ----
+function getGroupImages(group) {
+  if (group.images) return group.images;
+  if (group.subgroups) return group.subgroups.flatMap((sg) => sg.images);
+  return [];
+}
+
 function getAllImageObjects(cat) {
   if (cat.images) return cat.images;
-  if (cat.groups) return cat.groups.flatMap((g) => g.images);
+  if (cat.groups) return cat.groups.flatMap((g) => getGroupImages(g));
   if (cat.posts) return cat.posts.flatMap((p) => p.images || []);
   return [];
 }
@@ -179,15 +185,33 @@ function renderSidebarLayout(cat) {
     heading.textContent = group.name;
     section.appendChild(heading);
 
-    const grid = document.createElement("div");
-    grid.className = "group-grid";
+    if (group.subgroups) {
+      // Event with sub-events: show all sub-events under one sidebar entry
+      group.subgroups.forEach((sg, si) => {
+        const subHeading = document.createElement("h4");
+        subHeading.className = "subgroup-heading";
+        subHeading.textContent = sg.name;
+        section.appendChild(subHeading);
 
-    group.images.forEach((imgObj) => {
-      grid.appendChild(makeGalleryItem(imgObj, globalIdx, `${group.name} photo`));
-      globalIdx++;
-    });
+        const grid = document.createElement("div");
+        grid.className = "group-grid";
+        sg.images.forEach((imgObj) => {
+          grid.appendChild(makeGalleryItem(imgObj, globalIdx, `${group.name} — ${sg.name}`));
+          globalIdx++;
+        });
+        section.appendChild(grid);
+      });
+    } else {
+      // Flat event: images directly
+      const grid = document.createElement("div");
+      grid.className = "group-grid";
+      (group.images || []).forEach((imgObj) => {
+        grid.appendChild(makeGalleryItem(imgObj, globalIdx, `${group.name} photo`));
+        globalIdx++;
+      });
+      section.appendChild(grid);
+    }
 
-    section.appendChild(grid);
     content.appendChild(section);
   });
 
