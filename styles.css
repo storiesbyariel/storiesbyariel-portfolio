@@ -209,6 +209,7 @@ body {
 
 .gallery-body {
   padding: 0 var(--gap) var(--gap);
+  overflow-x: hidden;
 }
 
 /* ---- Layout: Grid (Portraits, Headshots, Personal) ---- */
@@ -305,6 +306,35 @@ body {
 .nudge-right-far {
   align-self: flex-end;
   margin-right: 2%;
+}
+
+/* Featured full-bleed images */
+.scatter-full-desktop {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  align-self: center;
+}
+
+.scatter-full-mobile {
+  width: 50%;
+}
+
+@media (max-width: 520px) {
+  .scatter-full-desktop {
+    width: 85%;
+    margin-left: 0;
+  }
+
+  .scatter-full-mobile {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+}
+
+@media (min-width: 521px) and (max-width: 900px) {
+  .scatter-full-mobile {
+    width: 45%;
+  }
 }
 
 /* Add slight rotation for organic feel */

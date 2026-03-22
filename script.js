@@ -156,7 +156,7 @@ function renderScatterLayout(cat) {
   const scatter = document.createElement("div");
   scatter.className = "layout-scatter";
 
-  // Predefined size/offset patterns that repeat
+  // Predefined size/offset patterns for non-featured images
   const patterns = [
     { size: "large", nudge: "nudge-right" },
     { size: "small", nudge: "nudge-left" },
@@ -170,11 +170,25 @@ function renderScatterLayout(cat) {
     { size: "small", nudge: "nudge-left" },
   ];
 
+  let patIdx = 0;
+
   currentImages.forEach((imgObj, i) => {
-    const p = patterns[i % patterns.length];
     const item = document.createElement("div");
-    item.className = `scatter-item scatter-${p.size} ${p.nudge}`.trim();
-    item.innerHTML = `<img src="${imgObj.src}" alt="${imgObj.title || imgObj.caption || cat.name + ' moment'}" loading="lazy" />`;
+    const alt = imgObj.title || imgObj.caption || cat.name + " moment";
+
+    if (imgObj.feature === "desktop") {
+      // Full-bleed on desktop, normal on mobile
+      item.className = "scatter-item scatter-full-desktop";
+    } else if (imgObj.feature === "mobile") {
+      // Full-bleed on mobile, normal on desktop
+      item.className = "scatter-item scatter-full-mobile";
+    } else {
+      const p = patterns[patIdx % patterns.length];
+      item.className = `scatter-item scatter-${p.size} ${p.nudge}`.trim();
+      patIdx++;
+    }
+
+    item.innerHTML = `<img src="${imgObj.src}" alt="${alt}" loading="lazy" />`;
     item.addEventListener("click", () => openLightbox(i));
     scatter.appendChild(item);
   });
