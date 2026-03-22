@@ -135,7 +135,7 @@ function renderCategories() {
 }
 
 // ---- Gallery view ----
-function openGallery(catIndex) {
+function openGallery(catIndex, pushState = true) {
   const cat = CATEGORIES[catIndex];
   galleryTitle.textContent = cat.name;
   currentImages = cat.images;
@@ -160,20 +160,46 @@ function openGallery(catIndex) {
   homeView.classList.add("hidden");
   galleryView.classList.remove("hidden");
   window.scrollTo(0, 0);
+
+  if (pushState) {
+    history.pushState({ view: "gallery", catIndex }, "", `#${cat.name.toLowerCase()}`);
+  }
 }
 
-function closeGallery() {
+function closeGallery(pushState = true) {
   galleryView.classList.add("hidden");
   homeView.classList.remove("hidden");
   window.scrollTo(0, 0);
+
+  if (pushState) {
+    history.pushState({ view: "home" }, "", window.location.pathname);
+  }
 }
 
-backBtn.addEventListener("click", closeGallery);
+backBtn.addEventListener("click", () => closeGallery());
 
-// Handle browser back button
+// Browser back/forward button
+window.addEventListener("popstate", (e) => {
+  // Close lightbox first if open
+  if (!lightbox.classList.contains("hidden")) {
+    closeLightbox(false);
+    return;
+  }
+
+  if (e.state && e.state.view === "gallery") {
+    openGallery(e.state.catIndex, false);
+  } else {
+    closeGallery(false);
+  }
+});
+
+// Handle nav Home link
 document.querySelectorAll("[data-home]").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
+    if (!lightbox.classList.contains("hidden")) {
+      closeLightbox();
+    }
     if (!galleryView.classList.contains("hidden")) {
       closeGallery();
     }
@@ -187,11 +213,15 @@ function openLightbox(index) {
   updateLightbox();
   lightbox.classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  history.pushState({ view: "lightbox" }, "");
 }
 
-function closeLightbox() {
+function closeLightbox(pushState = true) {
   lightbox.classList.add("hidden");
   document.body.style.overflow = "";
+  if (pushState) {
+    history.back();
+  }
 }
 
 function updateLightbox() {
@@ -228,4 +258,5 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ---- Init ----
+history.replaceState({ view: "home" }, "", window.location.pathname);
 renderCategories();
