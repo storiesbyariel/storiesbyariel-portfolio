@@ -157,6 +157,7 @@ const CATEGORIES = [
 // ---- DOM refs ----
 const homeView = document.getElementById("home-view");
 const galleryView = document.getElementById("gallery-view");
+const contactView = document.getElementById("contact-view");
 const categoryGrid = document.getElementById("category-grid");
 const galleryBody = document.getElementById("gallery-body");
 const galleryTitle = document.getElementById("gallery-title");
@@ -173,6 +174,31 @@ let currentIndex = 0;
 
 // ---- Footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---- View management ----
+function hideAllViews() {
+  homeView.classList.add("hidden");
+  galleryView.classList.add("hidden");
+  contactView.classList.add("hidden");
+}
+
+function showHome(pushState = true) {
+  hideAllViews();
+  homeView.classList.remove("hidden");
+  window.scrollTo(0, 0);
+  if (pushState) {
+    history.pushState({ view: "home" }, "", window.location.pathname);
+  }
+}
+
+function showContact(pushState = true) {
+  hideAllViews();
+  contactView.classList.remove("hidden");
+  window.scrollTo(0, 0);
+  if (pushState) {
+    history.pushState({ view: "contact" }, "", "#contact");
+  }
+}
 
 // ---- Helpers ----
 function getAllImages(cat) {
@@ -395,7 +421,7 @@ function openGallery(catIndex, pushState = true) {
       renderGridLayout(cat);
   }
 
-  homeView.classList.add("hidden");
+  hideAllViews();
   galleryView.classList.remove("hidden");
   window.scrollTo(0, 0);
 
@@ -404,17 +430,7 @@ function openGallery(catIndex, pushState = true) {
   }
 }
 
-function closeGallery(pushState = true) {
-  galleryView.classList.add("hidden");
-  homeView.classList.remove("hidden");
-  window.scrollTo(0, 0);
-
-  if (pushState) {
-    history.pushState({ view: "home" }, "", window.location.pathname);
-  }
-}
-
-backBtn.addEventListener("click", () => closeGallery());
+backBtn.addEventListener("click", () => showHome());
 
 // Browser back/forward button
 window.addEventListener("popstate", (e) => {
@@ -425,21 +441,27 @@ window.addEventListener("popstate", (e) => {
 
   if (e.state && e.state.view === "gallery") {
     openGallery(e.state.catIndex, false);
+  } else if (e.state && e.state.view === "contact") {
+    showContact(false);
   } else {
-    closeGallery(false);
+    showHome(false);
   }
 });
 
-// Handle nav Home link
+// Handle nav links
 document.querySelectorAll("[data-home]").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
-    if (!lightbox.classList.contains("hidden")) {
-      closeLightbox();
-    }
-    if (!galleryView.classList.contains("hidden")) {
-      closeGallery();
-    }
+    if (!lightbox.classList.contains("hidden")) closeLightbox();
+    showHome();
+  });
+});
+
+document.querySelectorAll("[data-contact]").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!lightbox.classList.contains("hidden")) closeLightbox();
+    showContact();
   });
 });
 

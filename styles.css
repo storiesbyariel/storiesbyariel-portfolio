@@ -370,6 +370,86 @@ body {
   gap: var(--gap);
 }
 
+/* ---- Contact Page ---- */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.contact-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-subtext {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  max-width: 400px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+}
+
+.contact-label {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: var(--text-heading);
+}
+
+.contact-handle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 520px) {
+  .contact-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+}
+
 /* ---- Lightbox ---- */
 .lightbox {
   position: fixed;
