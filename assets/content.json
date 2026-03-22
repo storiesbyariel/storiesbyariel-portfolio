@@ -46,13 +46,28 @@
     {
       "name": "Places",
       "layout": "cities",
-      "cover": "assets/places/cover.jpg",
+      "cover": "assets/places/san-francisco/IMG_2062.jpg",
       "groups": [
         {
-          "name": "Barcelona",
+          "name": "New York",
           "images": [
-            { "src": "https://picsum.photos/seed/pl-bc1/1200/800" },
-            { "src": "https://picsum.photos/seed/pl-bc2/1200/800" }
+            { "src": "assets/places/nyc/IMGC0359.jpg" },
+            { "src": "assets/places/nyc/IMGC0474.jpg" },
+            { "src": "assets/places/nyc/IMGC9266.jpg" },
+            { "src": "assets/places/nyc/IMGL0299.jpg" },
+            { "src": "assets/places/nyc/IMGL1165.jpg" }
+          ]
+        },
+        {
+          "name": "San Francisco",
+          "images": [
+            { "src": "assets/places/san-francisco/4H4A4731_CR3.jpg" },
+            { "src": "assets/places/san-francisco/IMG_0538.jpg" },
+            { "src": "assets/places/san-francisco/IMG_2062.jpg" },
+            { "src": "assets/places/san-francisco/IMG_2209.jpg" },
+            { "src": "assets/places/san-francisco/IMGC5335.jpg" },
+            { "src": "assets/places/san-francisco/IMGC5352.jpg" },
+            { "src": "assets/places/san-francisco/IMGC5473.jpg" }
           ]
         }
       ]
