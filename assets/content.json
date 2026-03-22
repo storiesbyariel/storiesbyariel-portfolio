@@ -3,48 +3,23 @@
     {
       "name": "Headshots",
       "layout": "grid",
-      "cover": "assets/headshots/cover.jpg",
+      "cover": "assets/headshots/IMGC67193.5.jpg",
       "images": [
-        {
-          "src": "https://picsum.photos/seed/hs1/1200/800",
-          "title": "Studio Natural Light",
-          "description": "Clean, confident headshot for creative professionals",
-          "camera": "Sony A7IV",
-          "lens": "85mm f/1.4"
-        },
-        {
-          "src": "https://picsum.photos/seed/hs2/1200/800",
-          "title": "Urban Professional",
-          "description": "Environmental headshot on location",
-          "camera": "Sony A7IV",
-          "lens": "50mm f/1.2"
-        },
-        {
-          "src": "https://picsum.photos/seed/hs3/1200/800",
-          "title": "Executive Portrait",
-          "description": "Corporate headshot with soft backdrop",
-          "camera": "Sony A7IV",
-          "lens": "85mm f/1.4"
-        },
-        {
-          "src": "https://picsum.photos/seed/hs4/1200/800",
-          "title": "Artist Profile",
-          "camera": "Sony A7IV",
-          "lens": "35mm f/1.4"
-        },
-        {
-          "src": "https://picsum.photos/seed/hs5/1200/800",
-          "title": "Team Headshots",
-          "description": "Consistent branding across a full team",
-          "camera": "Sony A7IV",
-          "lens": "85mm f/1.4"
-        },
-        {
-          "src": "https://picsum.photos/seed/hs6/1200/800",
-          "title": "Window Light",
-          "camera": "Sony A7IV",
-          "lens": "50mm f/1.2"
-        }
+        { "src": "assets/headshots/bgs0328.jpg" },
+        { "src": "assets/headshots/bsg-preshoot3.jpg" },
+        { "src": "assets/headshots/IMG_1102.jpg" },
+        { "src": "assets/headshots/IMGC67193.5.jpg" },
+        { "src": "assets/headshots/IMGC67444.jpg" },
+        { "src": "assets/headshots/IMGC67864.jpg" },
+        { "src": "assets/headshots/IMGC68414.jpg" },
+        { "src": "assets/headshots/IMGC68594.jpg" },
+        { "src": "assets/headshots/IMGC68784.jpg" },
+        { "src": "assets/headshots/IMGC69004.jpg" },
+        { "src": "assets/headshots/IMGC69244.jpg" },
+        { "src": "assets/headshots/IMGC69414.jpg" },
+        { "src": "assets/headshots/IMGC69964.jpg" },
+        { "src": "assets/headshots/IMGC70124.jpg" },
+        { "src": "assets/headshots/IMGC8244.jpg" }
       ]
     },
     {
@@ -55,66 +30,9 @@
         {
           "name": "New York",
           "images": [
-            {
-              "src": "https://picsum.photos/seed/mom-ny1/1200/800",
-              "title": "Subway Commuters",
-              "description": "Morning rush on the L train",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/mom-ny2/1200/800",
-              "title": "Street Vendor",
-              "camera": "Fuji X-T5",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/mom-ny3/1200/800",
-              "title": "Crosswalk",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            }
-          ]
-        },
-        {
-          "name": "Tokyo",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/mom-tk1/1200/800",
-              "title": "Shibuya Crossing",
-              "camera": "Fuji X-T5",
-              "lens": "16mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/mom-tk2/1200/800",
-              "title": "Quiet Alley",
-              "description": "Side street in Shimokitazawa",
-              "camera": "Fuji X-T5",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/mom-tk3/1200/800",
-              "title": "Train Platform",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            }
-          ]
-        },
-        {
-          "name": "London",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/mom-ld1/1200/800",
-              "title": "Camden Market",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/mom-ld2/1200/800",
-              "title": "Rainy Bus Stop",
-              "camera": "Fuji X-T5",
-              "lens": "35mm f/1.4"
-            }
+            { "src": "https://picsum.photos/seed/mom-ny1/1200/800" },
+            { "src": "https://picsum.photos/seed/mom-ny2/1200/800" },
+            { "src": "https://picsum.photos/seed/mom-ny3/1200/800" }
           ]
         }
       ]
@@ -127,61 +45,8 @@
         {
           "name": "Barcelona",
           "images": [
-            {
-              "src": "https://picsum.photos/seed/pl-bc1/1200/800",
-              "title": "Gothic Quarter",
-              "description": "Morning light through narrow stone streets",
-              "camera": "Sony A7IV",
-              "lens": "24mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/pl-bc2/1200/800",
-              "title": "Barceloneta Beach",
-              "camera": "Sony A7IV",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/pl-bc3/1200/800",
-              "title": "Park Guell",
-              "camera": "Sony A7IV",
-              "lens": "16-35mm f/2.8"
-            }
-          ]
-        },
-        {
-          "name": "Lisbon",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/pl-ls1/1200/800",
-              "title": "Alfama District",
-              "description": "Tiled facades and winding staircases",
-              "camera": "Sony A7IV",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/pl-ls2/1200/800",
-              "title": "Tram 28",
-              "camera": "Sony A7IV",
-              "lens": "50mm f/1.2"
-            }
-          ]
-        },
-        {
-          "name": "Iceland",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/pl-ic1/1200/800",
-              "title": "Black Sand Beach",
-              "description": "Reynisfjara at dawn",
-              "camera": "Sony A7IV",
-              "lens": "16-35mm f/2.8"
-            },
-            {
-              "src": "https://picsum.photos/seed/pl-ic2/1200/800",
-              "title": "Northern Lights",
-              "camera": "Sony A7IV",
-              "lens": "14mm f/1.8"
-            }
+            { "src": "https://picsum.photos/seed/pl-bc1/1200/800" },
+            { "src": "https://picsum.photos/seed/pl-bc2/1200/800" }
           ]
         }
       ]
@@ -189,77 +54,20 @@
     {
       "name": "Events",
       "layout": "sidebar",
-      "cover": "assets/events/cover.jpg",
+      "cover": "assets/events/quince/IMG_1497.jpg",
       "groups": [
         {
-          "name": "Art Gallery Opening",
+          "name": "Quince",
           "images": [
-            {
-              "src": "https://picsum.photos/seed/ev-ag1/1200/800",
-              "title": "Opening Night",
-              "description": "Guests exploring the new exhibition",
-              "camera": "Sony A7IV",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-ag2/1200/800",
-              "title": "The Artist",
-              "camera": "Sony A7IV",
-              "lens": "85mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-ag3/1200/800",
-              "title": "Conversations",
-              "camera": "Sony A7IV",
-              "lens": "50mm f/1.2"
-            }
-          ]
-        },
-        {
-          "name": "Birthday Celebration",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/ev-bd1/1200/800",
-              "title": "The Surprise",
-              "camera": "Sony A7IV",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-bd2/1200/800",
-              "title": "Candlelight",
-              "camera": "Sony A7IV",
-              "lens": "50mm f/1.2"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-bd3/1200/800",
-              "title": "Dancing",
-              "camera": "Sony A7IV",
-              "lens": "24mm f/1.4"
-            }
-          ]
-        },
-        {
-          "name": "Corporate Summit",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/ev-cs1/1200/800",
-              "title": "Keynote",
-              "description": "Main stage presentation",
-              "camera": "Sony A7IV",
-              "lens": "70-200mm f/2.8"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-cs2/1200/800",
-              "title": "Networking",
-              "camera": "Sony A7IV",
-              "lens": "35mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/ev-cs3/1200/800",
-              "title": "Panel Discussion",
-              "camera": "Sony A7IV",
-              "lens": "70-200mm f/2.8"
-            }
+            { "src": "assets/events/quince/IMG_1497.jpg" },
+            { "src": "assets/events/quince/IMG_1505.jpg" },
+            { "src": "assets/events/quince/IMG_1537.jpg" },
+            { "src": "assets/events/quince/IMG_1547.jpg" },
+            { "src": "assets/events/quince/IMG_1614.jpg" },
+            { "src": "assets/events/quince/IMG_5452.jpg" },
+            { "src": "assets/events/quince/IMG_5594.jpg" },
+            { "src": "assets/events/quince/IMG_5595.jpg" },
+            { "src": "assets/events/quince/IMG_5606.jpg" }
           ]
         }
       ]
@@ -276,59 +84,11 @@
           "images": [
             {
               "src": "https://picsum.photos/seed/blog1a/1200/800",
-              "caption": "Kitchen window, late afternoon",
-              "camera": "Fuji X-T5",
-              "lens": "35mm f/1.4"
+              "caption": "Kitchen window, late afternoon"
             },
             {
               "src": "https://picsum.photos/seed/blog1b/1200/800",
-              "caption": "Shadow study on the fire escape",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            }
-          ]
-        },
-        {
-          "title": "A Week in Oaxaca",
-          "date": "2025-09-03",
-          "body": "I went to Oaxaca with no shot list and no plan. Just a camera and a willingness to get lost. That turned out to be exactly what I needed. The colors there don't feel real until you see them in person — and even then, your camera can only get halfway there.",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/blog2a/1200/800",
-              "caption": "Mercado Benito Juarez",
-              "camera": "Fuji X-T5",
-              "lens": "23mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/blog2b/1200/800",
-              "caption": "Street mural in Jalatlaco",
-              "camera": "Fuji X-T5",
-              "lens": "16mm f/1.4"
-            },
-            {
-              "src": "https://picsum.photos/seed/blog2c/1200/800",
-              "caption": "Mezcal sunset",
-              "camera": "Fuji X-T5",
-              "lens": "35mm f/1.4"
-            }
-          ]
-        },
-        {
-          "title": "Why I Still Shoot Film",
-          "date": "2025-06-20",
-          "body": "Digital is my workhorse. It pays the bills and it's incredible at what it does. But film forces me to slow down in a way that changes how I see. There's a physicality to loading a roll, advancing the frame, waiting for scans. It reminds me why I picked up a camera in the first place.",
-          "images": [
-            {
-              "src": "https://picsum.photos/seed/blog3a/1200/800",
-              "caption": "Portra 400, Coney Island",
-              "camera": "Contax G2",
-              "lens": "45mm f/2"
-            },
-            {
-              "src": "https://picsum.photos/seed/blog3b/1200/800",
-              "caption": "Tri-X, Central Park",
-              "camera": "Leica M6",
-              "lens": "35mm f/2"
+              "caption": "Shadow study on the fire escape"
             }
           ]
         }
