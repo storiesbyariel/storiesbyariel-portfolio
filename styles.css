@@ -163,7 +163,7 @@ body {
   padding: 1rem;
 }
 
-/* ---- Gallery View ---- */
+/* ---- Gallery View (shared) ---- */
 .gallery-header {
   display: flex;
   align-items: center;
@@ -197,11 +197,15 @@ body {
   text-transform: uppercase;
 }
 
-.gallery-grid {
+.gallery-body {
+  padding: 0 var(--gap) var(--gap);
+}
+
+/* ---- Layout: Grid (Portraits, Headshots, Personal) ---- */
+.layout-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
-  padding: 0 var(--gap) var(--gap);
 }
 
 .gallery-item {
@@ -223,7 +227,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Placeholder gallery item */
 .gallery-item.placeholder {
   display: flex;
   align-items: center;
@@ -231,6 +234,130 @@ body {
   border: 1px solid #2a2a2a;
   color: var(--text-muted);
   font-size: 0.85rem;
+}
+
+/* ---- Layout: Sidebar (Events) ---- */
+.layout-sidebar {
+  display: flex;
+  gap: 0;
+  min-height: 60vh;
+}
+
+.sidebar-nav {
+  position: sticky;
+  top: 4rem;
+  align-self: flex-start;
+  width: 220px;
+  flex-shrink: 0;
+  padding: 1rem 0;
+  border-right: 1px solid #2a2a2a;
+}
+
+.sidebar-nav-item {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.7rem 1.2rem;
+  color: var(--text-muted);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-nav-item:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sidebar-nav-item.active {
+  color: var(--text-heading);
+  border-left-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sidebar-content {
+  flex: 1;
+  padding-left: var(--gap);
+}
+
+.group-section {
+  margin-bottom: 3rem;
+}
+
+.group-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--text-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: var(--gap);
+}
+
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+/* ---- Layout: Cities (Street, Travel) ---- */
+.cities-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 1.5rem;
+}
+
+.city-btn {
+  background: none;
+  border: 1px solid #333;
+  color: var(--text-muted);
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.city-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.city-btn.active {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.cities-content .group-section {
+  margin-bottom: 3rem;
+}
+
+.cities-content .group-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--text-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0 1rem;
+}
+
+.cities-content .group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
 }
 
 /* ---- Lightbox ---- */
@@ -317,14 +444,22 @@ body {
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .category-grid,
-  .gallery-grid {
+  .layout-grid,
+  .group-grid,
+  .cities-content .group-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-nav {
+    width: 180px;
   }
 }
 
 @media (max-width: 520px) {
   .category-grid,
-  .gallery-grid {
+  .layout-grid,
+  .group-grid,
+  .cities-content .group-grid {
     grid-template-columns: 1fr;
   }
 
@@ -336,5 +471,38 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 4.5rem 1rem 1.5rem;
+  }
+
+  /* Sidebar collapses to horizontal scroll on mobile */
+  .layout-sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar-nav {
+    position: static;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 0;
+    gap: 0;
+  }
+
+  .sidebar-nav-item {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-nav-item.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+
+  .sidebar-content {
+    padding-left: 0;
   }
 }

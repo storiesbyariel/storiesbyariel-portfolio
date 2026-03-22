@@ -1,16 +1,19 @@
 /* =============================================
    Stories by Ariel — Portfolio Logic
    =============================================
-   To add your own photos:
-   1. Drop images into assets/<category-folder>/
-   2. Update the CATEGORIES array below with the
-      category name, cover image path, and array
-      of image paths.
+   Layout types:
+   - "grid"    → flat photo grid (Portraits, Headshots, Personal)
+   - "sidebar" → left sidebar nav with grouped sections (Events)
+   - "cities"  → horizontal city nav with grouped sections (Street, Travel)
+
+   For "grid" categories, use a flat `images` array.
+   For "sidebar" and "cities", use a `groups` array of { name, images }.
    ============================================= */
 
 const CATEGORIES = [
   {
     name: "Portraits",
+    layout: "grid",
     cover: "https://picsum.photos/seed/portraits/800/600",
     images: [
       "https://picsum.photos/seed/port1/1200/800",
@@ -23,6 +26,7 @@ const CATEGORIES = [
   },
   {
     name: "Headshots",
+    layout: "grid",
     cover: "https://picsum.photos/seed/headshots/800/600",
     images: [
       "https://picsum.photos/seed/head1/1200/800",
@@ -35,42 +39,109 @@ const CATEGORIES = [
   },
   {
     name: "Events",
+    layout: "sidebar",
     cover: "https://picsum.photos/seed/events/800/600",
-    images: [
-      "https://picsum.photos/seed/evt1/1200/800",
-      "https://picsum.photos/seed/evt2/1200/800",
-      "https://picsum.photos/seed/evt3/1200/800",
-      "https://picsum.photos/seed/evt4/1200/800",
-      "https://picsum.photos/seed/evt5/1200/800",
-      "https://picsum.photos/seed/evt6/1200/800",
+    groups: [
+      {
+        name: "Art Gallery Opening",
+        images: [
+          "https://picsum.photos/seed/evt-ag1/1200/800",
+          "https://picsum.photos/seed/evt-ag2/1200/800",
+          "https://picsum.photos/seed/evt-ag3/1200/800",
+        ],
+      },
+      {
+        name: "Community Festival",
+        images: [
+          "https://picsum.photos/seed/evt-cf1/1200/800",
+          "https://picsum.photos/seed/evt-cf2/1200/800",
+          "https://picsum.photos/seed/evt-cf3/1200/800",
+        ],
+      },
+      {
+        name: "Brand Launch",
+        images: [
+          "https://picsum.photos/seed/evt-bl1/1200/800",
+          "https://picsum.photos/seed/evt-bl2/1200/800",
+          "https://picsum.photos/seed/evt-bl3/1200/800",
+        ],
+      },
     ],
   },
   {
     name: "Street",
+    layout: "cities",
     cover: "https://picsum.photos/seed/street/800/600",
-    images: [
-      "https://picsum.photos/seed/str1/1200/800",
-      "https://picsum.photos/seed/str2/1200/800",
-      "https://picsum.photos/seed/str3/1200/800",
-      "https://picsum.photos/seed/str4/1200/800",
-      "https://picsum.photos/seed/str5/1200/800",
-      "https://picsum.photos/seed/str6/1200/800",
+    groups: [
+      {
+        name: "New York",
+        images: [
+          "https://picsum.photos/seed/str-ny1/1200/800",
+          "https://picsum.photos/seed/str-ny2/1200/800",
+          "https://picsum.photos/seed/str-ny3/1200/800",
+          "https://picsum.photos/seed/str-ny4/1200/800",
+        ],
+      },
+      {
+        name: "Tokyo",
+        images: [
+          "https://picsum.photos/seed/str-tk1/1200/800",
+          "https://picsum.photos/seed/str-tk2/1200/800",
+          "https://picsum.photos/seed/str-tk3/1200/800",
+        ],
+      },
+      {
+        name: "London",
+        images: [
+          "https://picsum.photos/seed/str-ld1/1200/800",
+          "https://picsum.photos/seed/str-ld2/1200/800",
+          "https://picsum.photos/seed/str-ld3/1200/800",
+        ],
+      },
+      {
+        name: "Paris",
+        images: [
+          "https://picsum.photos/seed/str-pr1/1200/800",
+          "https://picsum.photos/seed/str-pr2/1200/800",
+          "https://picsum.photos/seed/str-pr3/1200/800",
+        ],
+      },
     ],
   },
   {
     name: "Travel",
+    layout: "cities",
     cover: "https://picsum.photos/seed/travel/800/600",
-    images: [
-      "https://picsum.photos/seed/trv1/1200/800",
-      "https://picsum.photos/seed/trv2/1200/800",
-      "https://picsum.photos/seed/trv3/1200/800",
-      "https://picsum.photos/seed/trv4/1200/800",
-      "https://picsum.photos/seed/trv5/1200/800",
-      "https://picsum.photos/seed/trv6/1200/800",
+    groups: [
+      {
+        name: "Barcelona",
+        images: [
+          "https://picsum.photos/seed/trv-bc1/1200/800",
+          "https://picsum.photos/seed/trv-bc2/1200/800",
+          "https://picsum.photos/seed/trv-bc3/1200/800",
+        ],
+      },
+      {
+        name: "Lisbon",
+        images: [
+          "https://picsum.photos/seed/trv-ls1/1200/800",
+          "https://picsum.photos/seed/trv-ls2/1200/800",
+          "https://picsum.photos/seed/trv-ls3/1200/800",
+        ],
+      },
+      {
+        name: "Mexico City",
+        images: [
+          "https://picsum.photos/seed/trv-mx1/1200/800",
+          "https://picsum.photos/seed/trv-mx2/1200/800",
+          "https://picsum.photos/seed/trv-mx3/1200/800",
+        ],
+      },
     ],
   },
   {
     name: "Personal",
+    layout: "grid",
     cover: "https://picsum.photos/seed/personal/800/600",
     images: [
       "https://picsum.photos/seed/per1/1200/800",
@@ -87,7 +158,7 @@ const CATEGORIES = [
 const homeView = document.getElementById("home-view");
 const galleryView = document.getElementById("gallery-view");
 const categoryGrid = document.getElementById("category-grid");
-const galleryGrid = document.getElementById("gallery-grid");
+const galleryBody = document.getElementById("gallery-body");
 const galleryTitle = document.getElementById("gallery-title");
 const backBtn = document.getElementById("back-btn");
 const lightbox = document.getElementById("lightbox");
@@ -102,6 +173,21 @@ let currentIndex = 0;
 
 // ---- Footer year ----
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---- Helpers ----
+function getAllImages(cat) {
+  if (cat.images) return cat.images;
+  if (cat.groups) return cat.groups.flatMap((g) => g.images);
+  return [];
+}
+
+function makeGalleryItem(src, globalIndex, altText) {
+  const item = document.createElement("div");
+  item.className = "gallery-item";
+  item.innerHTML = `<img src="${src}" alt="${altText}" loading="lazy" />`;
+  item.addEventListener("click", () => openLightbox(globalIndex));
+  return item;
+}
 
 // ---- Build category grid ----
 function renderCategories() {
@@ -134,27 +220,179 @@ function renderCategories() {
   });
 }
 
+// ---- Layout renderers ----
+function renderGridLayout(cat) {
+  currentImages = cat.images || [];
+  const grid = document.createElement("div");
+  grid.className = "layout-grid";
+
+  if (currentImages.length === 0) {
+    for (let i = 0; i < 3; i++) {
+      const ph = document.createElement("div");
+      ph.className = "gallery-item placeholder";
+      ph.textContent = "No photos yet";
+      grid.appendChild(ph);
+    }
+  } else {
+    currentImages.forEach((src, i) => {
+      grid.appendChild(makeGalleryItem(src, i, `${cat.name} photo ${i + 1}`));
+    });
+  }
+
+  galleryBody.appendChild(grid);
+}
+
+function renderSidebarLayout(cat) {
+  currentImages = getAllImages(cat);
+  const wrapper = document.createElement("div");
+  wrapper.className = "layout-sidebar";
+
+  // Sidebar nav
+  const nav = document.createElement("nav");
+  nav.className = "sidebar-nav";
+
+  // Content area
+  const content = document.createElement("div");
+  content.className = "sidebar-content";
+
+  let globalIdx = 0;
+
+  (cat.groups || []).forEach((group, gi) => {
+    // Nav button
+    const btn = document.createElement("button");
+    btn.className = "sidebar-nav-item" + (gi === 0 ? " active" : "");
+    btn.textContent = group.name;
+    btn.addEventListener("click", () => {
+      nav.querySelectorAll(".sidebar-nav-item").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const target = content.querySelector(`[data-group="${gi}"]`);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    nav.appendChild(btn);
+
+    // Group section
+    const section = document.createElement("div");
+    section.className = "group-section";
+    section.setAttribute("data-group", gi);
+
+    const heading = document.createElement("h3");
+    heading.className = "group-heading";
+    heading.textContent = group.name;
+    section.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "group-grid";
+
+    group.images.forEach((src) => {
+      grid.appendChild(makeGalleryItem(src, globalIdx, `${group.name} photo`));
+      globalIdx++;
+    });
+
+    section.appendChild(grid);
+    content.appendChild(section);
+  });
+
+  wrapper.appendChild(nav);
+  wrapper.appendChild(content);
+  galleryBody.appendChild(wrapper);
+
+  // Update active sidebar item on scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const gi = entry.target.getAttribute("data-group");
+          nav.querySelectorAll(".sidebar-nav-item").forEach((b, idx) => {
+            b.classList.toggle("active", idx === parseInt(gi));
+          });
+        }
+      });
+    },
+    { rootMargin: "-20% 0px -60% 0px" }
+  );
+
+  content.querySelectorAll(".group-section").forEach((s) => observer.observe(s));
+}
+
+function renderCitiesLayout(cat) {
+  currentImages = getAllImages(cat);
+
+  // City navigation bar
+  const cityNav = document.createElement("div");
+  cityNav.className = "cities-nav";
+
+  // "All" button
+  const allBtn = document.createElement("button");
+  allBtn.className = "city-btn active";
+  allBtn.textContent = "All";
+  allBtn.addEventListener("click", () => {
+    cityNav.querySelectorAll(".city-btn").forEach((b) => b.classList.remove("active"));
+    allBtn.classList.add("active");
+    citiesContent.querySelectorAll(".group-section").forEach((s) => (s.style.display = ""));
+  });
+  cityNav.appendChild(allBtn);
+
+  (cat.groups || []).forEach((group, gi) => {
+    const btn = document.createElement("button");
+    btn.className = "city-btn";
+    btn.textContent = group.name;
+    btn.addEventListener("click", () => {
+      cityNav.querySelectorAll(".city-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      citiesContent.querySelectorAll(".group-section").forEach((s, idx) => {
+        s.style.display = idx === gi ? "" : "none";
+      });
+    });
+    cityNav.appendChild(btn);
+  });
+
+  galleryBody.appendChild(cityNav);
+
+  // City grouped content
+  const citiesContent = document.createElement("div");
+  citiesContent.className = "cities-content";
+
+  let globalIdx = 0;
+
+  (cat.groups || []).forEach((group, gi) => {
+    const section = document.createElement("div");
+    section.className = "group-section";
+
+    const heading = document.createElement("h3");
+    heading.className = "group-heading";
+    heading.textContent = group.name;
+    section.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "group-grid";
+
+    group.images.forEach((src) => {
+      grid.appendChild(makeGalleryItem(src, globalIdx, `${group.name} photo`));
+      globalIdx++;
+    });
+
+    section.appendChild(grid);
+    citiesContent.appendChild(section);
+  });
+
+  galleryBody.appendChild(citiesContent);
+}
+
 // ---- Gallery view ----
 function openGallery(catIndex, pushState = true) {
   const cat = CATEGORIES[catIndex];
   galleryTitle.textContent = cat.name;
-  currentImages = cat.images;
-  galleryGrid.innerHTML = "";
+  galleryBody.innerHTML = "";
 
-  if (cat.images.length === 0) {
-    galleryGrid.innerHTML = `
-      <div class="gallery-item placeholder">No photos yet</div>
-      <div class="gallery-item placeholder">No photos yet</div>
-      <div class="gallery-item placeholder">No photos yet</div>
-    `;
-  } else {
-    cat.images.forEach((src, i) => {
-      const item = document.createElement("div");
-      item.className = "gallery-item";
-      item.innerHTML = `<img src="${src}" alt="${cat.name} photo ${i + 1}" loading="lazy" />`;
-      item.addEventListener("click", () => openLightbox(i));
-      galleryGrid.appendChild(item);
-    });
+  switch (cat.layout) {
+    case "sidebar":
+      renderSidebarLayout(cat);
+      break;
+    case "cities":
+      renderCitiesLayout(cat);
+      break;
+    default:
+      renderGridLayout(cat);
   }
 
   homeView.classList.add("hidden");
@@ -180,7 +418,6 @@ backBtn.addEventListener("click", () => closeGallery());
 
 // Browser back/forward button
 window.addEventListener("popstate", (e) => {
-  // Close lightbox first if open
   if (!lightbox.classList.contains("hidden")) {
     closeLightbox(false);
     return;
@@ -244,12 +481,10 @@ lbClose.addEventListener("click", closeLightbox);
 lbPrev.addEventListener("click", prevImage);
 lbNext.addEventListener("click", nextImage);
 
-// Click outside image to close
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
 
-// Keyboard navigation
 document.addEventListener("keydown", (e) => {
   if (lightbox.classList.contains("hidden")) return;
   if (e.key === "Escape") closeLightbox();
