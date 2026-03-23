@@ -1,25 +1,160 @@
 {
   "categories": [
     {
+      "name": "Events",
+      "layout": "sidebar",
+      "cover": "assets/events/quince/IMG_1537.jpg",
+      "groups": [
+        {
+          "name": "Fort Light",
+          "subgroups": [
+            {
+              "name": "Event 1",
+              "images": [
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4420.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4422.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4452.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4501.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4555.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4644.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4715.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4811.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-1/IMGC4979.jpg"
+                }
+              ]
+            },
+            {
+              "name": "Event 2",
+              "images": [
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC5936.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC5970.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6000.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6028.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6110.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6166.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6265.jpg"
+                },
+                {
+                  "src": "assets/events/fort-light/event-2/IMGC6282.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Quince",
+          "images": [
+            {
+              "src": "assets/events/quince/IMG_1497.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_1505.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_1537.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_1547.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_1614.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_5452.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_5594.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_5595.jpg"
+            },
+            {
+              "src": "assets/events/quince/IMG_5606.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Headshots",
       "layout": "grid",
       "cover": "assets/headshots/bsg-preshoot3.jpg",
       "images": [
-        { "src": "assets/headshots/bgs0328.jpg" },
-        { "src": "assets/headshots/bsg-preshoot3.jpg" },
-        { "src": "assets/headshots/IMG_1102.jpg" },
-        { "src": "assets/headshots/IMGC67193.5.jpg" },
-        { "src": "assets/headshots/IMGC67444.jpg" },
-        { "src": "assets/headshots/IMGC67864.jpg" },
-        { "src": "assets/headshots/IMGC68414.jpg" },
-        { "src": "assets/headshots/IMGC68594.jpg" },
-        { "src": "assets/headshots/IMGC68784.jpg" },
-        { "src": "assets/headshots/IMGC69004.jpg" },
-        { "src": "assets/headshots/IMGC69244.jpg" },
-        { "src": "assets/headshots/IMGC69414.jpg" },
-        { "src": "assets/headshots/IMGC69964.jpg" },
-        { "src": "assets/headshots/IMGC70124.jpg" },
-        { "src": "assets/headshots/IMGC8244.jpg" }
+        {
+          "src": "assets/headshots/bgs0328.jpg"
+        },
+        {
+          "src": "assets/headshots/bsg-preshoot3.jpg"
+        },
+        {
+          "src": "assets/headshots/IMG_1102.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC67193.5.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC67444.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC67864.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC68414.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC68594.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC68784.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC69004.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC69244.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC69414.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC69964.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC70124.jpg"
+        },
+        {
+          "src": "assets/headshots/IMGC8244.jpg"
+        }
       ]
     },
     {
@@ -30,33 +165,78 @@
         {
           "name": "Still",
           "images": [
-            { "src": "assets/moments/IMGC5249.jpg", "feature": "desktop" },
-            { "src": "assets/moments/IMG_0645.jpg", "feature": "mobile" },
-            { "src": "assets/moments/IMG_2103.jpg" },
-            { "src": "assets/moments/IMG_2178.jpg", "feature": "desktop" },
-            { "src": "assets/moments/IMG_2106.jpg" },
-            { "src": "assets/moments/IMGC0167.jpg", "feature": "mobile" },
-            { "src": "assets/moments/IMGC0306.jpg" },
-            { "src": "assets/moments/4H4A4677.jpg", "feature": "mobile" },
-            { "src": "assets/moments/4H4A4688.jpg", "feature": "desktop" },
-            { "src": "assets/moments/IMGC9814_Original.jpg" }
+            {
+              "src": "assets/moments/IMGC5249.jpg",
+              "feature": "desktop"
+            },
+            {
+              "src": "assets/moments/IMG_0645.jpg",
+              "feature": "mobile"
+            },
+            {
+              "src": "assets/moments/IMG_2103.jpg"
+            },
+            {
+              "src": "assets/moments/IMG_2178.jpg",
+              "feature": "desktop"
+            },
+            {
+              "src": "assets/moments/IMG_2106.jpg"
+            },
+            {
+              "src": "assets/moments/IMGC0167.jpg",
+              "feature": "mobile"
+            },
+            {
+              "src": "assets/moments/IMGC0306.jpg"
+            },
+            {
+              "src": "assets/moments/4H4A4677.jpg",
+              "feature": "mobile"
+            },
+            {
+              "src": "assets/moments/4H4A4688.jpg",
+              "feature": "desktop"
+            },
+            {
+              "src": "assets/moments/IMGC9814_Original.jpg"
+            }
           ]
         },
         {
           "name": "Walking",
           "images": [
-            { "src": "assets/moments/IMGC0129.jpg", "feature": "mobile" },
-            { "src": "assets/moments/IMG_1660.jpg" },
-            { "src": "assets/moments/IMG_2203.jpg" },
-            { "src": "assets/moments/IMGC0103.jpg", "feature": "mobile" }
+            {
+              "src": "assets/moments/IMGC0129.jpg",
+              "feature": "mobile"
+            },
+            {
+              "src": "assets/moments/IMG_1660.jpg"
+            },
+            {
+              "src": "assets/moments/IMG_2203.jpg"
+            },
+            {
+              "src": "assets/moments/IMGC0103.jpg",
+              "feature": "mobile"
+            }
           ]
         },
         {
           "name": "Music",
           "images": [
-            { "src": "assets/moments/IMGC0325.jpg", "feature": "mobile" },
-            { "src": "assets/moments/IMGC5148.jpg", "feature": "desktop" },
-            { "src": "assets/moments/20220318_224231.jpg", "feature": "desktop" }
+            {
+              "src": "assets/moments/IMGC0325.jpg",
+              "feature": "mobile"
+            },
+            {
+              "src": "assets/moments/IMGC5148.jpg",
+              "feature": "desktop"
+            },
+            {
+              "src": "assets/moments/20220318_224231.jpg",
+              "feature": "desktop"
+            }
           ]
         }
       ]
@@ -69,89 +249,86 @@
         {
           "name": "New York",
           "images": [
-            { "src": "assets/places/nyc/IMGC0161.jpg" },
-            { "src": "assets/places/nyc/IMGC0359.jpg" },
-            { "src": "assets/places/nyc/IMGC0415.jpg" },
-            { "src": "assets/places/nyc/IMGC0429.jpg" },
-            { "src": "assets/places/nyc/IMGC0474.jpg" },
-            { "src": "assets/places/nyc/IMGC0489.jpg" },
-            { "src": "assets/places/nyc/IMGC0497.jpg" },
-            { "src": "assets/places/nyc/IMGC9266.jpg" },
-            { "src": "assets/places/nyc/IMGL0299.jpg" },
-            { "src": "assets/places/nyc/IMGL1165.jpg" },
-            { "src": "assets/places/nyc/IMGL6458.jpg" }
+            {
+              "src": "assets/places/nyc/IMGC0161.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0359.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0415.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0429.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0474.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0489.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC0497.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGC9266.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGL0299.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGL1165.jpg"
+            },
+            {
+              "src": "assets/places/nyc/IMGL6458.jpg"
+            }
           ]
         },
         {
           "name": "San Francisco",
           "images": [
-            { "src": "assets/places/san-francisco/4H4A4607.jpg" },
-            { "src": "assets/places/san-francisco/4H4A4706.jpg" },
-            { "src": "assets/places/san-francisco/4H4A4731_CR3.jpg" },
-            { "src": "assets/places/san-francisco/4H4A4757.jpg" },
-            { "src": "assets/places/san-francisco/4H4A4759.jpg" },
-            { "src": "assets/places/san-francisco/4H4A4825.jpg" },
-            { "src": "assets/places/san-francisco/IMG_0538.jpg" },
-            { "src": "assets/places/san-francisco/IMG_0656_Original.jpg" },
-            { "src": "assets/places/san-francisco/IMG_2062.jpg" },
-            { "src": "assets/places/san-francisco/IMG_2209.jpg" },
-            { "src": "assets/places/san-francisco/IMGC5335.jpg" },
-            { "src": "assets/places/san-francisco/IMGC5352.jpg" },
-            { "src": "assets/places/san-francisco/IMGC5473.jpg" },
-            { "src": "assets/places/san-francisco/IMGL9879_Original.jpg" }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Events",
-      "layout": "sidebar",
-      "cover": "assets/events/quince/IMG_1537.jpg",
-      "groups": [
-        {
-          "name": "Fort Light",
-          "subgroups": [
             {
-              "name": "Event 1",
-              "images": [
-                { "src": "assets/events/fort-light/event-1/IMGC4420.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4422.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4452.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4501.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4555.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4644.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4715.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4811.jpg" },
-                { "src": "assets/events/fort-light/event-1/IMGC4979.jpg" }
-              ]
+              "src": "assets/places/san-francisco/4H4A4607.jpg"
             },
             {
-              "name": "Event 2",
-              "images": [
-                { "src": "assets/events/fort-light/event-2/IMGC5936.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC5970.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6000.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6028.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6110.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6166.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6265.jpg" },
-                { "src": "assets/events/fort-light/event-2/IMGC6282.jpg" }
-              ]
+              "src": "assets/places/san-francisco/4H4A4706.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/4H4A4731_CR3.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/4H4A4757.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/4H4A4759.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/4H4A4825.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMG_0538.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMG_0656_Original.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMG_2062.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMG_2209.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMGC5335.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMGC5352.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMGC5473.jpg"
+            },
+            {
+              "src": "assets/places/san-francisco/IMGL9879_Original.jpg"
             }
-          ]
-        },
-        {
-          "name": "Quince",
-          "images": [
-            { "src": "assets/events/quince/IMG_1497.jpg" },
-            { "src": "assets/events/quince/IMG_1505.jpg" },
-            { "src": "assets/events/quince/IMG_1537.jpg" },
-            { "src": "assets/events/quince/IMG_1547.jpg" },
-            { "src": "assets/events/quince/IMG_1614.jpg" },
-            { "src": "assets/events/quince/IMG_5452.jpg" },
-            { "src": "assets/events/quince/IMG_5594.jpg" },
-            { "src": "assets/events/quince/IMG_5595.jpg" },
-            { "src": "assets/events/quince/IMG_5606.jpg" }
           ]
         }
       ]
