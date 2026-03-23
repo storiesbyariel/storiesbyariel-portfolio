@@ -69,11 +69,18 @@
         {
           "name": "New York",
           "images": [
+            { "src": "assets/places/nyc/IMGC0161.jpg" },
             { "src": "assets/places/nyc/IMGC0359.jpg" },
+            { "src": "assets/places/nyc/IMGC0415.jpg" },
+            { "src": "assets/places/nyc/IMGC0429.jpg" },
             { "src": "assets/places/nyc/IMGC0474.jpg" },
+            { "src": "assets/places/nyc/IMGC0474-2.jpg" },
+            { "src": "assets/places/nyc/IMGC0489.jpg" },
+            { "src": "assets/places/nyc/IMGC0497.jpg" },
             { "src": "assets/places/nyc/IMGC9266.jpg" },
             { "src": "assets/places/nyc/IMGL0299.jpg" },
-            { "src": "assets/places/nyc/IMGL1165.jpg" }
+            { "src": "assets/places/nyc/IMGL1165.jpg" },
+            { "src": "assets/places/nyc/IMGL6458.jpg" }
           ]
         },
         {
