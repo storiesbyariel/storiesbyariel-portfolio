@@ -71,6 +71,7 @@ function getGroupImages(group) {
 
 function getAllImageObjects(cat) {
   if (cat.images) return cat.images;
+  if (cat.themes) return cat.themes.flatMap((t) => t.images);
   if (cat.groups) return cat.groups.flatMap((g) => getGroupImages(g));
   if (cat.posts) return cat.posts.flatMap((p) => p.images || []);
   return [];
@@ -152,11 +153,10 @@ function renderGridLayout(cat) {
 }
 
 function renderScatterLayout(cat) {
-  currentImages = cat.images || [];
+  currentImages = getAllImageObjects(cat);
   const scatter = document.createElement("div");
   scatter.className = "layout-scatter";
 
-  // Predefined size/offset patterns for non-featured images
   const patterns = [
     { size: "large", nudge: "nudge-right" },
     { size: "small", nudge: "nudge-left" },
@@ -170,27 +170,39 @@ function renderScatterLayout(cat) {
     { size: "small", nudge: "nudge-left" },
   ];
 
+  const themes = cat.themes || [{ name: null, images: cat.images || [] }];
+  let globalIdx = 0;
   let patIdx = 0;
 
-  currentImages.forEach((imgObj, i) => {
-    const item = document.createElement("div");
-    const alt = imgObj.title || imgObj.caption || cat.name + " moment";
-
-    if (imgObj.feature === "desktop") {
-      // Full-bleed on desktop, normal on mobile
-      item.className = "scatter-item scatter-full-desktop";
-    } else if (imgObj.feature === "mobile") {
-      // Full-bleed on mobile, normal on desktop
-      item.className = "scatter-item scatter-full-mobile";
-    } else {
-      const p = patterns[patIdx % patterns.length];
-      item.className = `scatter-item scatter-${p.size} ${p.nudge}`.trim();
-      patIdx++;
+  themes.forEach((theme) => {
+    // Theme heading
+    if (theme.name) {
+      const heading = document.createElement("h3");
+      heading.className = "scatter-theme-heading";
+      heading.textContent = theme.name;
+      scatter.appendChild(heading);
     }
 
-    item.innerHTML = `<img src="${imgObj.src}" alt="${alt}" loading="lazy" />`;
-    item.addEventListener("click", () => openLightbox(i));
-    scatter.appendChild(item);
+    theme.images.forEach((imgObj) => {
+      const item = document.createElement("div");
+      const alt = imgObj.title || imgObj.caption || cat.name + " moment";
+
+      if (imgObj.feature === "desktop") {
+        item.className = "scatter-item scatter-full-desktop";
+      } else if (imgObj.feature === "mobile") {
+        item.className = "scatter-item scatter-full-mobile";
+      } else {
+        const p = patterns[patIdx % patterns.length];
+        item.className = `scatter-item scatter-${p.size} ${p.nudge}`.trim();
+        patIdx++;
+      }
+
+      item.innerHTML = `<img src="${imgObj.src}" alt="${alt}" loading="lazy" />`;
+      const idx = globalIdx;
+      item.addEventListener("click", () => openLightbox(idx));
+      scatter.appendChild(item);
+      globalIdx++;
+    });
   });
 
   galleryBody.appendChild(scatter);
