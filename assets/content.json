@@ -37,8 +37,6 @@
             { "src": "assets/moments/IMG_2106.jpg" },
             { "src": "assets/moments/IMGC0167.jpg", "feature": "mobile" },
             { "src": "assets/moments/IMGC0306.jpg" },
-            { "src": "assets/moments/IMGC0325.jpg" },
-            { "src": "assets/moments/20220318_224231.jpg", "feature": "desktop" },
             { "src": "assets/moments/4H4A4677.jpg", "feature": "mobile" },
             { "src": "assets/moments/4H4A4688.jpg", "feature": "desktop" },
             { "src": "assets/moments/IMGC9814_Original.jpg" }
@@ -52,6 +50,13 @@
             { "src": "assets/moments/IMG_2203.jpg" },
             { "src": "assets/moments/IMGC0103.jpg", "feature": "mobile" },
             { "src": "assets/moments/IMGC5148.jpg", "feature": "desktop" }
+          ]
+        },
+        {
+          "name": "Music",
+          "images": [
+            { "src": "assets/moments/IMGC0325.jpg", "feature": "mobile" },
+            { "src": "assets/moments/20220318_224231.jpg", "feature": "desktop" }
           ]
         }
       ]
