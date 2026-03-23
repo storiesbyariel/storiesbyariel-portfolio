@@ -136,22 +136,39 @@
       ]
     },
     {
-      "name": "Personal",
+      "name": "My Life",
       "layout": "blog",
-      "cover": "assets/personal/cover.jpg",
+      "cover": "assets/my-life/IMGC6408.jpg",
       "posts": [
         {
-          "title": "Finding Light in the Everyday",
-          "date": "2025-11-15",
-          "body": "There's something about the way light falls through a window at 4pm in November that makes everything feel cinematic. I've been chasing that quality in my personal work — not the golden hour everyone talks about, but the quiet, honest light that shows up when you're not trying.",
           "images": [
             {
-              "src": "https://picsum.photos/seed/blog1a/1200/800",
-              "caption": "Kitchen window, late afternoon"
-            },
+              "src": "assets/my-life/IMGC6408.jpg",
+              "caption": "Father and son sharing a laugh"
+            }
+          ]
+        },
+        {
+          "images": [
             {
-              "src": "https://picsum.photos/seed/blog1b/1200/800",
-              "caption": "Shadow study on the fire escape"
+              "src": "assets/my-life/IMGC5226.jpg",
+              "caption": "Self-portrait with camera"
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "src": "assets/my-life/IMG_6215_HEIC.jpg",
+              "caption": "A kiss on the boardwalk"
+            }
+          ]
+        },
+        {
+          "images": [
+            {
+              "src": "assets/my-life/IMG_2797.jpg",
+              "caption": "Little one with a basketball, waiting by the door"
             }
           ]
         }
