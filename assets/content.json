@@ -48,14 +48,14 @@
             { "src": "assets/moments/IMGC0129.jpg", "feature": "mobile" },
             { "src": "assets/moments/IMG_1660.jpg" },
             { "src": "assets/moments/IMG_2203.jpg" },
-            { "src": "assets/moments/IMGC0103.jpg", "feature": "mobile" },
-            { "src": "assets/moments/IMGC5148.jpg", "feature": "desktop" }
+            { "src": "assets/moments/IMGC0103.jpg", "feature": "mobile" }
           ]
         },
         {
           "name": "Music",
           "images": [
             { "src": "assets/moments/IMGC0325.jpg", "feature": "mobile" },
+            { "src": "assets/moments/IMGC5148.jpg", "feature": "desktop" },
             { "src": "assets/moments/20220318_224231.jpg", "feature": "desktop" }
           ]
         }
