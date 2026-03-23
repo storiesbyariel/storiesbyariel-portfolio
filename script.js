@@ -365,14 +365,16 @@ function renderBlogLayout(cat) {
     const article = document.createElement("article");
     article.className = "blog-post";
 
-    // Post header
-    const header = document.createElement("div");
-    header.className = "blog-post-header";
-    header.innerHTML = `
-      <h3 class="blog-post-title">${post.title}</h3>
-      ${post.date ? `<time class="blog-post-date">${formatDate(post.date)}</time>` : ""}
-    `;
-    article.appendChild(header);
+    // Post header (only if title or date exists)
+    if (post.title || post.date) {
+      const header = document.createElement("div");
+      header.className = "blog-post-header";
+      header.innerHTML = `
+        ${post.title ? `<h3 class="blog-post-title">${post.title}</h3>` : ""}
+        ${post.date ? `<time class="blog-post-date">${formatDate(post.date)}</time>` : ""}
+      `;
+      article.appendChild(header);
+    }
 
     // Post body text
     if (post.body) {
