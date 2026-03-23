@@ -85,13 +85,20 @@
         {
           "name": "San Francisco",
           "images": [
+            { "src": "assets/places/san-francisco/4H4A4607.jpg" },
+            { "src": "assets/places/san-francisco/4H4A4706.jpg" },
             { "src": "assets/places/san-francisco/4H4A4731_CR3.jpg" },
+            { "src": "assets/places/san-francisco/4H4A4757.jpg" },
+            { "src": "assets/places/san-francisco/4H4A4759.jpg" },
+            { "src": "assets/places/san-francisco/4H4A4825.jpg" },
             { "src": "assets/places/san-francisco/IMG_0538.jpg" },
+            { "src": "assets/places/san-francisco/IMG_0656_Original.jpg" },
             { "src": "assets/places/san-francisco/IMG_2062.jpg" },
             { "src": "assets/places/san-francisco/IMG_2209.jpg" },
             { "src": "assets/places/san-francisco/IMGC5335.jpg" },
             { "src": "assets/places/san-francisco/IMGC5352.jpg" },
-            { "src": "assets/places/san-francisco/IMGC5473.jpg" }
+            { "src": "assets/places/san-francisco/IMGC5473.jpg" },
+            { "src": "assets/places/san-francisco/IMGL9879_Original.jpg" }
           ]
         }
       ]
